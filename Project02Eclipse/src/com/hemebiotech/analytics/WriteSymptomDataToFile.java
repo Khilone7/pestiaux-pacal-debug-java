@@ -3,10 +3,13 @@ package com.hemebiotech.analytics;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.Map;
+import java.util.logging.Logger;
 
 public class WriteSymptomDataToFile implements ISymptomWriter {
 
-    private String filepath;
+    private final String filepath;
+
+    private static final Logger logger = Logger.getLogger(WriteSymptomDataToFile.class.getName());
 
     public WriteSymptomDataToFile(String filepath) {
         this.filepath = filepath;
@@ -26,7 +29,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
                 writer.newLine();
             }
         }catch(Exception e){
-            e.printStackTrace();
+            logger.severe(e.getMessage());
         }
 
 

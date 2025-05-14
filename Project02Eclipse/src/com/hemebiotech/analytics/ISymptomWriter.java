@@ -14,5 +14,5 @@ public interface ISymptomWriter {
      * @param symptoms A map containing symptom names as keys and their occurrence counts as values.
      */
 
-    public void  writeSymptoms(Map<String, Integer> symptoms);
+    void  writeSymptoms(Map<String, Integer> symptoms);
 }
