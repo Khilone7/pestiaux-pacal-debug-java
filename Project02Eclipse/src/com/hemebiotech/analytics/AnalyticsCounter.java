@@ -34,7 +34,7 @@ public class AnalyticsCounter {
 	 * @return an unordered list of symptoms
 	 */
 
-	public List<String> getSymptoms () {
+	public List<String> getSymptoms (){
         try {
             return reader.getSymptoms();
         } catch (IOException e) {
@@ -48,7 +48,7 @@ public class AnalyticsCounter {
 	 * @return a map of symptoms (unordered) with their respective counts
 	 */
 
-	public Map<String , Integer  > countSymptoms (List<String> symptoms) {
+	public Map<String , Integer> countSymptoms (List<String> symptoms) {
 		Map<String , Integer> symptomsCount = new HashMap<>();
 
 		symptoms.forEach(symptom ->
