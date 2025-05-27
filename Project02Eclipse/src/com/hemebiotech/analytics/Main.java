@@ -9,11 +9,11 @@ public class Main {
         ISymptomReader reader = new ReadSymptomDataFromFile("symptoms.txt");
         ISymptomWriter writer = new WriteSymptomDataToFile("result.out");
 
-        AnalyticsCounter counter = new AnalyticsCounter(reader,writer);
+        AnalyticsCounter counter = new AnalyticsCounter(reader, writer);
 
         List<String> symptoms = counter.getSymptoms();
-        Map<String,Integer> countedSymptoms = counter.countSymptoms(symptoms);
-        Map<String,Integer> sortedSymptoms = counter.sortSymptoms(countedSymptoms);
+        Map<String, Integer> countedSymptoms = counter.countSymptoms(symptoms);
+        Map<String, Integer> sortedSymptoms = counter.sortSymptoms(countedSymptoms);
         counter.writeSymptoms(sortedSymptoms);
     }
 }
